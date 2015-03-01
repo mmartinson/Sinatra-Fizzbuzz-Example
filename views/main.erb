@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FizzBuzz On Sinatra</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/sweet-alert.css">
+</head>
+<body>
+  <div class="navbar" id="header">
+    <h1 class="text-center pull-center">FizzBuzz..A Game of Secrets</h1>
+    <h4 class="text-center">Now available in a responsive browser window for added novelty</h4>
+    <a href="http://twitter.com/untimelyquests" class="navbar-brand pull-right"><img id="twitter" src="/twitter_white.png" alt="Twitter">@untimelyquests</a>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6" id="left">
+        <form action="/" method="post">
+          <div class="form-group">
+            <label for="num-1">Starting Number</label>
+            <input type="text" name="num1" class="form-control" id"num-1" value="1" align="center"autofocus>
+          </div>
+          <div class="form-group">
+            <label for="num-2">Ending Number</label>
+            <input type="text" class="form-control" id="num-2" name="num2" value="50">  
+          </div>
+          <div class="form-group">
+            <label for="word-1">Multiple of three replacement word</label>
+            <input type="text" class="form-control" id="word-2" name="word1" value="Party">
+          </div>
+          <div class="form-group">
+            <label for="word-2">Multiple of five replacement word</label>
+            <input type="text" class="form-control" id="word-2" name="word2" value="Rock">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-alert" type="submit">Run the numbers</button>
+          </div>
+        </form>
+        <form action="/" method="get">
+          <button class="btn btn-alert">I don't want to see this garbage</button>
+        </form>
+
+      </div>
+      <div class="col-md-6 col-sm-6" id="right">
+
+        <% if @fizzbuzz %>
+        <h4 class="text-center">Results</h4>
+        <table class="table table-condensed">
+          <% @fizzbuzz.each do |num| %>
+          <tr><td><samp><strong><%= num %></strong></samp></td></tr>
+          <% end %>
+        </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <script src="/sweet-alert.min.js"></script>
+  <script src="/jquery.min.js"></script>
+  <%= @alert %>
+</body>
+</html>

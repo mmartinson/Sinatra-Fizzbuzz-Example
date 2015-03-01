@@ -1,0 +1,92 @@
+h1 {
+  font-family: lobster;
+}
+
+body, html {
+  margin: 0;
+  overflow: hidden;
+  height:100%;
+}
+
+@media (min-width: 768px){
+  #left {
+    position: absolute;
+    top: 98px;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll; 
+  }
+  
+  #right {
+    position: absolute;
+    top: 98px;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+    background-color: #4FC1E9;
+  }
+}
+
+#left {
+  background-color: #FC6E51;
+  text-align: center;
+  height:100%;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  vertical-align: auto;
+}
+
+#right {
+  height:100%;
+  background-color: #4FC1E9;
+  text-align: center;
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+
+@media (max-width: 480px){
+  body {
+    position: absolute;
+    height: 100%;
+    overflow-y: scroll; 
+  }
+}
+
+h1 {
+  /*position: fixed;*/
+  color: white;
+}
+
+#header {
+  background-color: #00002e;
+  width: 100%;
+}
+
+#header * {
+  color: white;
+  font-family: lobster;
+}
+
+#header h3 {
+  padding-bottom: 10px;
+}
+
+
+#header a {
+  float: right;
+}
+
+input.form-control {
+  width: 30%;
+}
+
+.form-control {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#twitter {
+  height: 18px;
+  width: auto;
+}
+
